@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>education page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>var i = 0;
+        var time = 2000;
+        var image = [];
+        
+        image[0] = 'education1.jpg';
+        image[1] = 'education2.jpg';
+        image[2] = 'education3.jpg';
+        
+        
+        function changeImg() {
+            document.slide.src = image[i];
+        
+            if(i < image.length -1){
+                i++;
+            } else{
+                i = 0;
+            }
+        
+            setTimeout("changeImg()", time);
+        }
+        
+        window.onload = changeImg;</script>
+        <style>
+            body{
+                padding: 20px;
+                margin: 5%;
+                background-color: #252525;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+            }
+            .card{
+                width: 60%;
+                height: fit-content;
+                background-color: #fff;
+                border: 2px solid #5ab9ea;
+                border-radius: 10px;
+            }
+            #font-id{
+                font-size: 20px;
+                font-weight: 700;
+                color: #252525;
+                float: right;
+            }
+            #font-id a i{
+                text-decoration: none;
+                color: #000000;
+                padding: 20px;
+                font-size: 30px;
+                font-weight: 800;
+            }
+            img{
+                width: 100%;
+                height: 400px;
+            }
+            .para{
+                display: flex;
+                position: relative;
+                align-items: flex-start;
+                padding-left: 10px;
+                justify-content: baseline;
+            }
+            .para p{
+                color: #000000;
+                font-size: 18px;
+            }
+            .para span{
+                color: #5ab9ea;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="card">
+        <div id="font-id">
+            <a href="index.html"><i class="fa-regular fa-circle-xmark"></i></a>
+        </div>
+           <img name="slide" alt="">
+        <div class="para">
+            <p><span>Energy efficient lighting for learning</span><br>
+                lighting for educational environments covers lighting solutions from nurseries
+                 to universites. What all these areas have in common is that they must  stimulate students
+                  to learn in different environments where new teaching styles are gaining ground.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
